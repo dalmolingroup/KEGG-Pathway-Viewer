@@ -1,73 +1,78 @@
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://mit-licence.igorabrandao.com.br/)
+# KEGG PATHWAY VIEWER (KPV)
 
-# KPV - KEGG PATHWAY VIEWER
-KPV is an online tool to visualize and interact with KEGG metabolic pathways.
+KPV is an advanced online tool designed for the visualization and interactive exploration of KEGG metabolic pathways. It facilitates the dynamic analysis of metabolic networks, enabling users to investigate critical structural properties such as articulation points (APs) within these networks.
 
-## What's new about this?
+## Key Features
 
-The network elaborated in our study contemplates protein classifications according to the AP detection algorithm,facilitating the visual identification of the most important proteins of a network (points of articulation). Additionally, our proposal provides a dynamic HTML visualizations of KEGG pathways enabling the simulation of basic operations such as
-nodes removal and edge addition.
+The KPV tool introduces innovative features to enhance metabolic pathway analysis:
 
-## How to access the tool?
+- **Articulation Point (AP) Detection:** The platform incorporates an AP detection algorithm, enabling the classification and visual identification of key proteins whose removal may disrupt network connectivity.
+- **Dynamic Network Visualization:** KPV provides dynamic HTML visualizations of KEGG pathways, allowing users to simulate essential network operations, such as node removal and edge addition, to assess the impact on pathway integrity.
+- **Interactive User Interface:** Users can intuitively explore network topology, examine specific node metrics, and identify potential metabolic bottlenecks.
 
-Easy! [Just click here](https://igorabrandao.com.br/kegg-pathway-bottleneck/).
+## Accessing KPV
 
-## Ways to contribute
+KPV is freely accessible online. To explore the tool, please visit: [KEGG Pathway Viewer](https://dalmolingroup.imd.ufrn.br/kpv).
 
-You can help us to make this projet even better :rocket:. Here are the ways you can contribute to this project:
+## Contribution Guidelines
 
-### 1. Giving a feedback
+We welcome contributions to enhance KPV. There are several ways you can support the development and improvement of this scientific tool:
 
-Report your feedback, issues or suggestions by [creating a topic here](https://github.com/igorabrandao/kegg-network-viewer/issues) :punch:.
+### 1. Feedback and Suggestions
+Provide feedback, report issues, or suggest new features by [submitting an issue](https://github.com/dalmolingroup/KEGG-Pathway-Viewer/issues).
 
-### 2. Developing with us
+### 2. Development Contributions
+Developers interested in contributing to the project can refer to the [first-contributions guide](./includes/first-contributions/README.md) for more details.
 
-Bring your dev skills to the team [by clicking here](./includes/first-contributions/README.md) :computer:.
+## Contributors
 
-### 3. Making a donation
+We extend our gratitude to the individuals who have contributed to the development and improvement of KPV:
 
-As you know, KEGG PATHWAY VIEWER is a free web tool and it will remain free forever. However, maintaining and improving it  costs time and money. If you like our work and find it useful, please help science initiatives spread out. Your contribution will be greatly appreciated and help me continue to develop this awesome tool crafted with :heart:
+### Feedback and Suggestions
+- Inácio Medeiros
+- Diego Arthur
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7NV5RV8B2MTA4)
+### Development
+- Igor Brandão (igorabrandao@gmail.com)
+- Clovis F. Reis (cfreis@ufrn.edu.br)
 
-## Contributors:
 
-### Giving a feedback
+## Changelog
 
-* Inácio Medeiros
-* Diego Arthur
+To update the `CHANGELOG.md`, install the `auto-changelog` extension:
 
-### Developing
+```bash
+npm install -g auto-changelog
+```
 
-* Igor Brandão ( igorabrandao@gmail.com )
+Then run the following command:
 
-### Donating
+```bash
+auto-changelog --template keepachangelog
+```
 
-You can be the next to help out! :pray:
+## Version Control and Tagging
 
-## Changelog:
+To create release labels for the project, execute the following commands:
 
-In order to update the `CHANGELOG.md`, install the extension `auto-changelog`: [**npm install -g auto-changelog**] and after run the following command:
+```bash
+git tag -a v[x.x.x] -m "version [x.x.x]"
+git push origin --tags
+```
 
-    auto-changelog --template keepachangelog
+## File Permissions
 
-## Project version tags:
+When deploying the project to a server, ensure the following file and folder permissions:
 
-Toc create release labels to the project, execute the following commands:
+- **Folders:** `chmod 755`
+  ```bash
+  find . -type d -exec chmod 755 {} \;
+  ```
+- **Files:** `chmod 644`
+  ```bash
+  find . -type f -exec chmod 644 {} \;
+  ```
 
-    git tag -a v[version number in format x.x.x] -m "version [version number in format x.x.x]"
+## License
 
-    git push origin --tags
-
-## Note on file permission:
-
-When uploading the project to the server, set the following file and folder permissions:
-
-Folders like 755 find . -type d -exec chmod 755 {} \;
-
-Files like 644 find . -type f -exec chmod 644 {} \;
-
-## Licence:
-
-[The MIT License](https://mit-licence.igorabrandao.com.br/).
+This project is licensed under the [MIT License](https://mit-license.org/).
